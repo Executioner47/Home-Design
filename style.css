@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.page {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(../Home_Design/background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+nav {
+  width: fit-content;
+  margin: auto;
+  padding: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 120px;
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  list-style-type: none;
+  margin: 0 20px;
+  position: relative;
+}
+
+li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+li::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #6d0606;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+li:hover::after {
+  width: 100%;
+}
+
+section {
+  z-index: 1;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  text-align: center;
+  color: white;
+}
+
+section h1 {
+  font-size: 70px;
+  margin-top: 80px;
+}
+
+section p {
+  margin: 20px auto;
+  /* font-weight: 100; */
+  line-height: 25px;
+}
+
+button {
+  width: 200px;
+  padding: 15px;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #6d0606;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+button:hover {
+  background: #6d0606;
+}
+
+@media screen and (max-width: 830px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li {
+    margin-bottom: 9px;
+  }
+
+  section h1 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 220px) {
+  button {
+    width: 140px;
+  }
+}
